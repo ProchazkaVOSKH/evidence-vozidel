@@ -1,0 +1,1 @@
+Příklad uživatelského rozhraní
