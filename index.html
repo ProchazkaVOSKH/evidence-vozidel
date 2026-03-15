@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Správce vozového parku</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body class="w3-light-grey w3-sans-serif">
+
+    <header class="w3-container w3-blue w3-padding-24 w3-card">
+        <div class="w3-content" style="max-width: 1100px">
+            <h1 class="w3-xxlarge w3-margin-0">Evidence vozového parku</h1>
+        </div>
+    </header>
+
+    <main class="w3-content w3-margin-top" style="max-width: 1100px">
+
+        <div class="w3-row-padding w3-stretch">
+            <div class="w3-col l4 m5 s12">
+                <section id="zadani" class="w3-card w3-white w3-round-large w3-padding">
+                    <h2 class="w3-large">Nový vůz do evidence</h2>
+
+                    <fieldset class="w3-margin-top" style="border: 0; padding: 0; margin: 0;">
+
+                        <div class="w3-margin-top">
+                            <label for="vstup-znacka" class="w3-small">Značka auta</label>
+                            <input class="w3-input w3-border w3-round" type="text" id="txtZnacka" placeholder="např. Ferrari">
+                        </div>
+
+                        <div class="w3-margin-top">
+                            <label for="vstup-palivo" class="w3-small">Počáteční palivo (l)</label>
+                            <input class="w3-input w3-border w3-round" type="number" id="txtPalivo" min="0" step="0.1" placeholder="např. 20">
+                        </div>
+
+                        <button class="w3-button w3-green w3-round w3-block w3-margin-top" type="button" onclick="pridejVozidlo();">Přidat auto</button>
+                    </fieldset>
+                </section>
+            </div>
+
+            <div class="w3-col l8 m7 s12">
+                <section id="vystup" class="w3-card w3-white w3-round-large w3-padding">
+                    <div class="w3-bar w3-transparent">
+                        <h2 class="w3-bar-item w3-large w3-padding-0" style="margin: 0;">Seznam aut</h2>
+                    </div>
+
+                    <div class="w3-responsive w3-margin-top">
+                        <table class="w3-table-all w3-striped w3-small">
+                            <thead>
+                                <tr class="w3-light-grey">
+                                    <th >Značka</th>
+                                    <th >Palivo</th>
+                                    <th >Kilometry</th>
+                                    <th >Akce</th>        <!-- Tento sloupec bude obsahovat ovládací tlačítka -->
+                                </tr>
+                            </thead>
+                            <tbody id="tbodySeznamAut">
+                                <!-- Zde bude tělo tabulky, kam se budou dynamicky pomocí JS přidávat auta -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
